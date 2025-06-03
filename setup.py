@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='matlab2python',
+    name='mat2py_matrix_converter',
     version='0.1.0',
     packages=find_packages(),
     install_requires=[],
@@ -9,7 +9,7 @@ setup(
     description='A small utility to convert MATLAB-style matrix strings to Python/torch syntax',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/yourname/matlab2python',
+    url='https://github.com/AngelosGuan/mat2py_matrix_converter.git',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',

@@ -1,7 +1,6 @@
-import torch
 import re
-from tools.general import matlab_to_tensor
-from tools.variable_extractor import extract_matlab_variable_names
+from mat2py_matrix_converter.general import matlab_to_tensor
+from mat2py_matrix_converter.variable_extractor import extract_matlab_variable_names
 
 # convert matlab matrix to torch.tensor
 if __name__ == '__main__':

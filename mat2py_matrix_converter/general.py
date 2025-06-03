@@ -1,9 +1,8 @@
-import torch
 import re
-from tools.extract_raw_matrix_str import extract_assignment_and_matrix
-from tools.index_converter import convert_idx_for_var
-from tools.matrix_wrapper_converter import matlab_matrix_to_python
-from tools.variable_extractor import extract_matlab_variable_names
+from mat2py_matrix_converter.extract_raw_matrix_str import extract_assignment_and_matrix
+from mat2py_matrix_converter.index_converter import convert_idx_for_var
+from mat2py_matrix_converter.matrix_wrapper_converter import matlab_matrix_to_python
+from mat2py_matrix_converter.variable_extractor import extract_matlab_variable_names
 
 # convert matlab matrix to torch.tensor
 

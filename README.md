@@ -57,7 +57,23 @@ M = [1, 2; 3, 4]
 Even supports anonymous matrices (`=[...]` or `[...]`).
 
 ```python
-extract_assignment_and_matrix(input_str: str) -> tuple[str | None, str]
+extract_assignment_and_matrix(input_str: str) -> tuple
+```
+
+---
+
+### `general.py`
+
+Takes in string of Matlab matrix and return string of the matrix represented as a tensor:
+
+```matlab
+M = [1, 2; 3, 4]
+```
+
+Even supports anonymous matrices (`=[...]` or `[...]`).
+
+```python
+matlab_to_tensor(input_str: str) -> str
 ```
 
 ---
@@ -76,10 +92,9 @@ A full demo that:
 ## Example Usage
 
 ```python
-from example import matlab_to_tensor
+from mat2py_matrix_converter import matlab_to_tensor, extract_matlab_variable_names
 
-matlab_code = "M = [varX(1), 2; 3, 4]"
-tensor_expr = matlab_to_tensor(matlab_code)
-print(tensor_expr)
-# Output: torch.tensor([[varX[0], 2], [3, 4]])
+matlab_code = "M = [1, 2; 3, 4];"
+vars = extract_matlab_variable_names(matlab_code)
+py_tensor = matlab_to_tensor(matlab_code)
 ```
