@@ -12,9 +12,13 @@ def matlab_matrix_to_python(matlab_str: str) -> str:
         matlab_str = matlab_str[1:-1].strip()
 
     # Split into rows and clean each element
-    rows = [
-        f"[{', '.join(e.strip() for e in row.strip().split(','))}]"
-        for row in matlab_str.split(';') if row.strip()
+    rows = [row.strip() for row in matlab_str.split(';') if row.strip()]
+    parsed_rows = [
+        f"[{', '.join(e.strip() for e in row.split(','))}]"
+        for row in rows
     ]
 
-    return f"[{', '.join(rows)}]"
+    if len(parsed_rows) == 1:
+        return parsed_rows[0]  # return just the row, not nested
+        
+    return f"[{', '.join(parsed_rows)}]"

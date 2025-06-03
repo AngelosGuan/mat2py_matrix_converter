@@ -14,7 +14,7 @@ This library provides a set of utility functions to **convert MATLAB-style matri
 
 ---
 
-## 📁 Files Overview
+## Files Overview
 
 ### `index_converter.py`
 
