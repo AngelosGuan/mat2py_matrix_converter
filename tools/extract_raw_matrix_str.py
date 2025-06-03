@@ -1,7 +1,7 @@
 import re
 
 
-def extract_assignment_and_matrix(input_str: str) -> tuple[str | None, str]:
+def extract_assignment_and_matrix(input_str: str) -> tuple:
     """
     Extracts:
     - varname (or None) if the input is of the form 'varname = [ ... ]'
