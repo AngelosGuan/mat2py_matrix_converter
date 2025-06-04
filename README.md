@@ -97,4 +97,7 @@ from mat2py_matrix_converter import matlab_to_tensor, extract_matlab_variable_na
 matlab_code = "M = [1, 2; 3, 4];"
 vars = extract_matlab_variable_names(matlab_code)
 py_tensor = matlab_to_tensor(matlab_code)
+
+## In Progress
+Working on converting python array to torch.stack() operation that will preserve the gradient flow, given a input tensor. 
 ```
